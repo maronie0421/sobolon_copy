@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja"> <!-- ja に変更 -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--検索エンジンにインデックスされないようにする記載  -->
+  <meta name="robots" content="noindex" />
+
+  <title>sobolon</title> <!-- タイトルを変更 -->
+
+  <!-- faviconの読み込み -->
+   <link rel="icon" href="./favicon.ico" />
+
+  <!-- Google Fontsの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+  <!-- reset.cssの読み込み -->
+   <link rel="stylesheet" href="./css/reset.css">
+
+  <!-- cssを読み込む記述 -->
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header__inner inner">
+      <h1 class="header__logo">
+        <a href=""><img src="./img/logo.png" alt="sobolon"></a>
+      </h1>
+        <button
+          id="js-drawer-button"
+          type="button"
+          class="header__icon drawer-icon"
+        >
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+        <nav id="js-drawer-content" class="header__nav">
+          <ul class="header__lists">
+            <li class="header__list">
+              <a href="#concept" class="header__link">Concept</a>
+            </li>
+            <li class="header__list">
+              <a href="#feature" class="header__link">Feature</a>
+            </li>
+            <li class="header__list">
+              <a href="#products" class="header__link">Products</a>
+            </li>
+            <li class="header__list">
+              <a href="#news" class="header__link">News</a>
+            </li>
+            <li class="header__list">
+              <a href="#contact" class="header__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+  <!-- /header -->
+
+  <!-- ファーストビュー -->
+   <main class="main"> <!-- mainタグの中にheader下～footer上までのコンテンツ囲う -->
+    <div class="fv">
+      <div class="fv__inner inner">
+        <picture class="fv__image"> <!-- pictureタグを使ってウィンドウサイズによって画像を切り替える -->
+          <source media="(min-width: 768px)" srcset="./img/fv.jpg" /> <!-- 768px以上の時の画像を指定することができる -->
+          <img src="./img/sp/fv.jpg" alt=""> <!-- 通常の時の画像をいれる(SP) -->
+        </picture>
+        <div class="fv__message">
+          <p class="fv__title">
+            “可愛い” で<br />
+            ちきゅうを守る！
+          </p>
+          <p class="fv__text">
+            海洋マイクロプラスチックを素材とした<br />
+            ハンドメイドアクセサリー「sobolon」
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="concept section">
+      <div class="concept__inner inner">
+        <h2 class="heading section__head">Concept</h2>
+        <div class="concept__content section__content">
+          <div class="concept__image"><img src="./img/concept-1.jpg" alt=""></div>
+          <div class="concept__message">
+            <p class="concept__title">
+              可愛くてステキなのは当たり前。<br />地球にやさしくあるのも当たり前。
+            </p>
+            <p class="concept__text">
+              「sobolon」は、海洋汚染の要因であるマイク
+              ロプラスチックを回収し、それらを素材とした
+              ハンドメイドアクセサリーを製作しているブラ
+              ンドです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   </main>
+
+<!-- /bodyの上にscriptを読み込む記述 -->
+ <script src="./js/script.js"></script>
+</body>
+</html>
